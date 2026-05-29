@@ -1,10 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My First Flask Page</title>
+    <title>Exercise 48 - Compute the Double</title>
 </head>
 <body>
-    <h1>Hello from HTML Template!</h1>
-    <p>Welcome to Exercise 41.</p>
+    <h2>Input a number</h2>
+
+    <form action="/predict" method="post">
+        <input type="number" name="x" placeholder="Enter an integer..." required>
+        <button type="submit">Submit</button>
+    </form>
+
+    {% if result is not none %}
+        <hr>
+        <h3>Double Result: {{ result }}</h3>
+    {% endif %}
 </body>
 </html>
